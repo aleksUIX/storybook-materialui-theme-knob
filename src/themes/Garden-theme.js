@@ -4,12 +4,13 @@ import lightGreen from "@material-ui/core/colors/lightGreen";
 import lime from "@material-ui/core/colors/lime";
 import teal from "@material-ui/core/colors/teal";
 import yellow from "@material-ui/core/colors/yellow";
+import deepOrange from "@material-ui/core/colors/deepOrange";
 
 export default createMuiTheme({
   palette: {
     primary: lime,
     secondary: teal,
-    error: teal,
+    error: deepOrange,
     action: {
       disabledBackground: teal[400]
     },

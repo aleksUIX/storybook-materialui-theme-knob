@@ -1,7 +1,8 @@
 import React from "react";
+import { withKnobs } from "@storybook/addon-knobs";
+
 import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
-import { ThemeProvider } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
@@ -9,8 +10,7 @@ import Select from "@material-ui/core/Select";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import { makeStyles } from "@material-ui/core/styles";
 
-import GardenTheme from "../themes/Garden-theme";
-import RetroWave from "../themes/RetroWave-theme";
+import ThemeKnob from "./ThemeKnob";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   },
   selectEmpty: {
     marginTop: theme.spacing(2)
+  },
+  button: {
+    margin: theme.spacing(2)
   }
 }));
 
@@ -48,23 +51,41 @@ export const BasicControls = () => {
   };
 
   return (
-    <ThemeProvider theme={GardenTheme}>
+    <ThemeKnob>
       <div>
         <div>
-          <Button variant="contained">Default</Button>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            className={classes.button}
+          >
+            Default
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
             Primary
           </Button>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+          >
             Secondary
           </Button>
-          <Button variant="contained" disabled>
+          <Button
+            variant="contained"
+            disabled
+            className={classes.button}
+          >
             Disabled
           </Button>
           <Button
             variant="contained"
             color="primary"
             href="#contained-buttons"
+            className={classes.button}
           >
             Link
           </Button>
@@ -374,11 +395,12 @@ export const BasicControls = () => {
           </FormControl>
         </div>
       </div>
-    </ThemeProvider>
+    </ThemeKnob>
   );
 };
 
 export default {
   title: "Material Ui",
-  component: BasicControls
+  component: BasicControls,
+  decorators: [withKnobs]
 };
