@@ -48,7 +48,7 @@ export const BasicControls = () => {
   };
 
   return (
-    <ThemeProvider theme={RetroWave}>
+    <ThemeProvider theme={GardenTheme}>
       <div>
         <div>
           <Button variant="contained">Default</Button>
