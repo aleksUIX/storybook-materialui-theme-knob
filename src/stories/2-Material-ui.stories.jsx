@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -10,7 +9,6 @@ import Select from "@material-ui/core/Select";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import { makeStyles } from "@material-ui/core/styles";
 
-import ThemeKnob from "./ThemeKnob";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -51,7 +49,7 @@ export const BasicControls = () => {
   };
 
   return (
-    <ThemeKnob>
+    <>
       <div>
         <div>
           <Button
@@ -395,12 +393,11 @@ export const BasicControls = () => {
           </FormControl>
         </div>
       </div>
-    </ThemeKnob>
+    </>
   );
 };
 
 export default {
   title: "Material Ui",
-  component: BasicControls,
-  decorators: [withKnobs]
+  component: BasicControls
 };

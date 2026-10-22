@@ -1,9 +1,6 @@
-module.exports = {
-  stories: ["../src/**/*.stories.js"],
-  addons: [
-    "@storybook/preset-create-react-app",
-    "@storybook/addon-actions",
-    "@storybook/addon-links",
-    "@storybook/addon-knobs/register"
-  ]
+export default {
+  stories: ["../src/**/*.stories.jsx"],
+  staticDirs: ["../public"],
+  framework: "@storybook/react-vite",
+  addons: ["@storybook/addon-links"],
 };

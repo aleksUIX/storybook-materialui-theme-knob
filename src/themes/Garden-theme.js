@@ -1,10 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import { lightGreen, lime, teal, yellow, deepOrange } from "@material-ui/core/colors";
 
-import lightGreen from "@material-ui/core/colors/lightGreen";
-import lime from "@material-ui/core/colors/lime";
-import teal from "@material-ui/core/colors/teal";
-import yellow from "@material-ui/core/colors/yellow";
-import deepOrange from "@material-ui/core/colors/deepOrange";
 
 export default createMuiTheme({
   palette: {
